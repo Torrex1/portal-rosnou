@@ -1,16 +1,17 @@
 <template>
     <header>
         <ul class="headerList">
-            <li>
+            <li style="cursor: pointer;">
                 <i class="fa-solid fa-bars"></i>
             </li>
             <div class="right-side-list">
-                <li>
+                <li style="cursor: pointer;">
                     <i class="fa-solid fa-expand"></i>
                 </li>
-                <li>
-                    <img scr="assets/img/userImg.jpg" alt="userImg" class="avatar"></img>
-                    <span>Тарикулиев Рустам</span>
+                <li class="userInfo">
+                        <img class="userIcon" src="../assets/img/user.jpg" alt="icon">
+                        <span>Тарикулиев Рустам</span>
+
                 </li>
             </div>
            
@@ -19,20 +20,28 @@
 </template>
 
 <style scoped>
-/* .avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px solid black;
-  align-items: center;
-} */
 
 .headerList {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--gray);
-  padding: 10px 20px;
-  cursor: pointer;
+  padding: 20px 40px;
+  align-items: center;
+  max-height: 70px;
+}
+
+.userInfo {
+    cursor: pointer;  
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+}
+
+.userIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
 }
 
 .right-side-list {
