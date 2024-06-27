@@ -10,34 +10,40 @@
                 <ul>
                     <li>Общие страницы</li>
                     <li>
-                        <i class="fa-solid fa-shield-virus"></i>
-                        <span>Вакцинация</span>
+                        <div class="general-sections">
+                            <i class="fa-solid fa-shield-virus"></i>
+                            <span>Вакцинация</span>
+                        </div>
                     </li>
+                    
                     <li>Студенту</li>
-                    <li>
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <span>Электронное расписание</span>
-                    </li>
-                    <li>
-                        <i class="fa-regular fa-clipboard"></i>
-                        <span>Успеваемость</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>Учебная деятельность</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-briefcase"></i>
-                        <span>Портфолио</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-headphones"></i>
-                        <span>Перейти в конференцию</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-                        <span>Почта</span>
-                    </li>
+                    <div class="student-sections">
+                        <li>
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span>Электронное расписание</span>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-clipboard"></i>
+                            <span>Успеваемость</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Учебная деятельность</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-briefcase"></i>
+                            <span>Портфолио</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>Перейти в конференцию</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Почта</span>
+                        </li>
+                    </div>
+                    
                 </ul>
             </div>
         </div>
@@ -71,10 +77,42 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        cursor: pointer;
     }
 
     .menu-header span {
         font-size: 25px;
     }
 
+    .menu-main > ul {
+        margin-top: 25px; 
+        display: flex; 
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .general-sections{
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+    .student-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 25px; 
+        padding-left: 10px;
+    }
+
+    .student-sections li {
+        cursor: pointer;
+    }
+
+    /* .student-sections li:hover {
+        background-color: red;
+    } */
+
+    i {
+        margin-right: 5px;
+    }
+    
 </style>
