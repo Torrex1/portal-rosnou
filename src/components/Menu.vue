@@ -1,20 +1,25 @@
+<script setup>
+    const emit = defineEmits(['closeMenu']);
+</script>
+
 <template>
     <div class="menu-container">
         <div class="menu-content">
             <div class="menu-header">
                 <img style="width: 50px ; height: 50px;" src="../assets/img/rosnou.svg" alt="logo">
                 <span>Rosnou Portal</span>
+                <img @click="emit('closeMenu')" src="../assets/img/arrow-right.svg" alt="arrow">
             </div>
 
             <div class="menu-main">
                 <ul>
                     <li>Общие страницы</li>
-                    <li>
-                        <div class="general-sections">
+                    <div class="general-sections">
+                        <li>
                             <i class="fa-solid fa-shield-virus"></i>
                             <span>Вакцинация</span>
-                        </div>
-                    </li>
+                        </li>
+                    </div>
                     
                     <li>Студенту</li>
                     <div class="student-sections">
@@ -115,4 +120,12 @@
         margin-right: 5px;
     }
     
+    li span:hover {
+        color: #afb4b4;
+    }
+
+    li span:se {
+        color: #0bcece;
+    }
+
 </style>

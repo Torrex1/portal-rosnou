@@ -1,17 +1,21 @@
+<script setup>
+    const emit = defineEmits(['openMenu']);
+</script>
+
 <template>
     <header>
         <ul class="headerList">
             <li style="cursor: pointer;">
-                <i class="fa-solid fa-bars"></i>
+                <i @click="emit('openMenu')" class="fa-solid fa-bars"></i>
             </li>
             <div class="right-side-list">
                 <li style="cursor: pointer;">
                     <i class="fa-solid fa-expand"></i>
                 </li>
-                <li class="userInfo">
-                        <img class="userIcon" src="../assets/img/user.jpg" alt="icon">
-                        <span>Тарикулиев Рустам</span>
 
+                <li class="userInfo">
+                    <img class="userIcon" src="../assets/img/user.jpg" alt="icon">
+                    <span>Тарикулиев Рустам</span>
                 </li>
             </div>
            
