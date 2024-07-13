@@ -6,9 +6,9 @@
     <div class="menu-container">
         <div class="menu-content">
             <div class="menu-header">
-                <img style="width: 50px ; height: 50px;" src="../assets/img/rosnou.svg" alt="logo">
+                <img style="width: 35px ; height: 35px;" src="../assets/img/rosnou.svg" alt="logo">
                 <span>Rosnou Portal</span>
-                <img @click="emit('closeMenu')" src="../assets/img/arrow-right.svg" alt="arrow">
+                <img @click="emit('closeMenu')" style="width: 20px ; height: 20px;" src="../assets/img/arrow-right.svg" alt="arrow">
             </div>
 
             <div class="menu-main">
@@ -75,7 +75,7 @@
         left: 0;
         top: 0;
         z-index: 20;
-        padding: 10px 15px;
+        padding: 10px 15px;     
     }
 
     .menu-header {
@@ -86,7 +86,7 @@
     }
 
     .menu-header span {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     .menu-main > ul {

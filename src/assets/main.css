@@ -1,5 +1,20 @@
 @import './base.css';
 
+@font-face {
+  font-family: "SourceSans-regular";
+  src: url('./fonts/SourceSans3-Regular.ttf');
+}
+
+@font-face {
+  font-family: "SourceSans-bold";
+  src: url('./fonts/SourceSans3-Bold.ttf');
+}
+
+@font-face {
+  font-family: "SourceSans-medium";
+  src: url('./fonts/SourceSans3-Medium.ttf');
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,5 +24,6 @@
 
 body {
   background-color: var(--white);
+  font-family: 'SourceSans-regular', sans-serif;
 }
 
