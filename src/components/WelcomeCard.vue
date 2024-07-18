@@ -1,15 +1,15 @@
 <template>
     <div class="card">
         <div class="card-header">
-        <h3>Добро пожаловать</h3>
-        <div class="card-badges">
-            <div><i class="fa-solid fa-minus"></i></div>
-            <div class="close"><i class="fa-solid fa-xmark"></i></div>
-        </div>
+          <h3>Добро пожаловать</h3>
+          <div class="card-badges">
+              <div><i class="fa-solid fa-minus"></i></div>
+              <div class="close"><i class="fa-solid fa-xmark"></i></div>
+          </div>
         </div>
 
         <div class="card-body">
-        <p>Добро пожаловать на новый портал Российского нового университета.
+          <p>Добро пожаловать на новый портал Российского нового университета.
             Сайт еще находится в процессе разработки, но уже скоро здесь будет много всего.</p>
         </div>
     </div>
@@ -18,7 +18,7 @@
 <style scoped>
 .card {
   border: 1px solid rgb(204, 203, 203);
-  width: 600px;
+  width: 100%;
   height: 150px;
   margin-top: 20px;
   border-radius: 5px;
@@ -29,15 +29,15 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgb(204, 203, 203);
-  padding: 3px 10px;
+  padding: 10px 20px 10px 20px;
 }
 
 .card-header > h3 {
-  font-weight: bold;
+  font-weight: unset;
 }
 
 .card-body {
-  padding: 10px;
+  padding: 10px 0px 10px 20px;
   width: 85%;
   font-size: 18px;
 }

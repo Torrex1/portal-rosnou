@@ -3,6 +3,7 @@
   import Header from './components/Header.vue'
   import Menu from './components/Menu.vue'
   import WelcomeCard from './components/WelcomeCard.vue'
+  import AdmissionsCard from './components/AdmissionsCard.vue'
 
   const sidebarOpen = ref(false);
   const openMenu = () => {
@@ -16,10 +17,13 @@
 <template> 
   <Menu v-if="sidebarOpen" @closeMenu="closeMenu" />
   <Header @openMenu="openMenu" />
-  
-  <div style="margin: 10px 20px;">
+
+  <div style="padding: 1.5% 2.5%;  display: flex; flex-direction: column;">
     <h1>Главная</h1>
-    <WelcomeCard />
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+      <WelcomeCard />
+      <AdmissionsCard />
+    </div>
   </div>
   
 </template>
