@@ -4,6 +4,7 @@
 
 <template>
     <div class="menu-container">
+        <div @click="emit('closeMenu')" style="width: 100%; height: 100%;"></div>
         <div class="menu-content">
             <div class="menu-header">
                 <img style="width: 35px ; height: 35px;" src="../assets/img/rosnou.svg" alt="logo">

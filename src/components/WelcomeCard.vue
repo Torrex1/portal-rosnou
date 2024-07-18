@@ -39,7 +39,7 @@
 .card-body {
   padding: 10px;
   width: 85%;
-  font-size: 20px;
+  font-size: 18px;
 }
 .card-badges {
   display: flex; 
