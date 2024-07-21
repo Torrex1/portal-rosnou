@@ -17,7 +17,7 @@
 
 <style scoped>
 .card {
-  border: 1px solid rgb(204, 203, 203);
+  border: 1px solid var(--border-color);
   width: 100%;
   height: auto;
   margin-top: 20px;
@@ -28,7 +28,7 @@
 .card-header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgb(204, 203, 203);
+  border-bottom: 1px solid var(--border-color);
   padding: 10px 20px 10px 20px;
 }
 
