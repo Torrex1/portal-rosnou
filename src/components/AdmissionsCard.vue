@@ -22,7 +22,7 @@
 <style scoped>
 .card {
   border: 1px solid var(--border-color);
-  border-top: 5px solid #007bff;
+  border-top: 5px solid var(--primary);
   width: 100%;
   height: auto;
   margin-top: 20px;
@@ -51,7 +51,7 @@
     margin: 0px 0px 10px 20px;
     padding: 10px;
     color: var(--white);
-    background-color: #007bff;
+    background-color: var(--primary);
     border: unset;
     border-radius: 5px;
     cursor: pointer;

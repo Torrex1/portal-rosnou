@@ -15,8 +15,8 @@
 
         <div class="vaccination-card">
             <div class="vaccination-card-header">
-                <h3 style="padding: 10px;">Нет 18 лет</h3>
-                <button>Подать заявку</button>
+                <h3>Нет 18 лет</h3>
+                <button>Изменить</button>
             </div>
             
             <div class="vaccination-card-body">
@@ -44,8 +44,15 @@
 
 .vaccination-card {
     border: 1px solid var(--border-color);
-    border-top: 3px solid #007bff;
+    border-top: 3px solid var(--primary);
     border-radius: 5px;
+}
+
+.vaccination-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
 }
 
 .vaccination-card-body {
