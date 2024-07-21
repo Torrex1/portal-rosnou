@@ -19,7 +19,7 @@
 .card {
   border: 1px solid rgb(204, 203, 203);
   width: 100%;
-  height: 150px;
+  height: auto;
   margin-top: 20px;
   border-radius: 5px;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
