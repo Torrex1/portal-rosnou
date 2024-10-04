@@ -7,8 +7,11 @@
         <div @click="emit('closeMenu')" style="width: 100%; height: 100%;"></div>
         <div class="menu-content">
             <div class="menu-header">
-                <img style="width: 35px ; height: 35px;" src="../assets/img/rosnou.svg" alt="logo">
-                <span>Rosnou Portal</span>
+                <Router-Link to="/" style="display: flex; gap: 7px;">
+                    <img style="width: 35px ; height: 35px;" src="../assets/img/rosnou.svg" alt="logo">
+                    <span>Rosnou Portal</span>
+                </Router-Link>
+                
                 <img @click="emit('closeMenu')" style="width: 20px ; height: 20px;" src="../assets/img/arrow-right.svg" alt="arrow">
             </div>
 
@@ -18,7 +21,10 @@
                     <div class="general-sections">
                         <li>
                             <i class="fa-solid fa-shield-virus"></i>
-                            <span>Вакцинация</span>
+                            <Router-Link to="/vaccination">
+                                <span>Вакцинация</span>
+                            </Router-Link>
+                            
                         </li>
                     </div>
                     
