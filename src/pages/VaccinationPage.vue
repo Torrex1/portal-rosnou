@@ -1,7 +1,7 @@
 <script setup>
-    import VaccinationPage from '../components/Vaccination.vue'
+    import Vaccination from '../components/Vaccination.vue'
 </script>
 
 <template>
-    <VaccinationPage />
+    <Vaccination />
 </template>
