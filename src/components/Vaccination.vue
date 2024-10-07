@@ -1,3 +1,14 @@
+<script setup>
+    import { ref } from 'vue';
+    import Popup from './PopupComponents/Popup.vue';
+
+    const isPopupOpen = ref(false);
+    const toggle_popup = () => {
+        isPopupOpen.value = !isPopupOpen.value
+    }
+
+</script>
+
 <template>
     <h1>Вакцинация</h1>
 
@@ -22,7 +33,8 @@
         <div class="vaccination-card">
             <div class="vaccination-card-header">
                 <h3>Нет 18 лет</h3>
-                <button>Изменить</button>
+                <button @click="toggle_popup()">Изменить</button>
+                
             </div>
             
             <div class="vaccination-card-body">
@@ -30,6 +42,10 @@
                 03.04.2024
             </div>
         </div>
+        <Popup 
+            v-show="isPopupOpen"
+            @toggle_popup="toggle_popup"
+        />
 
     </div>
 </template>
