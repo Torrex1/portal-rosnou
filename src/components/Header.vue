@@ -1,5 +1,10 @@
 <script setup>
+    import { ref } from 'vue';
+    import UserProfile from './UserAccount/UserProfilePopup.vue';
+    
     const emit = defineEmits(['openMenu']);
+    const userName = ref('Тарикулиев Рустам');
+    const userIconSrc = ref(`https://ui-avatars.com/api/?name=${userName.value}&rounded=true&background=f8ebf4&color=d36ba9`);
 </script>
 
 <template>
@@ -14,13 +19,18 @@
                 </li>
 
                 <li class="userInfo">
-                    <img class="userIcon" src="../assets/img/user.jpg" alt="icon">
-                    <span>Тарикулиев Рустам</span>
+                    <img class="userIcon" :src="userIconSrc" alt="icon">
+                    <span>{{ userName }}</span>
                 </li>
             </div>
            
         </ul>
     </header>
+
+    <UserProfile 
+    :userIconSrc="userIconSrc"
+    :userName="userName"
+    />
 </template>
 
 <style scoped>
