@@ -4,7 +4,13 @@
     
     const emit = defineEmits(['openMenu']);
     const userName = ref('Тарикулиев Рустам');
-    const userIconSrc = ref(`https://ui-avatars.com/api/?name=${userName.value}&rounded=true&background=f8ebf4&color=d36ba9`);
+    const userIconSrc = ref(`https://ui-avatars.com/api/?name=${userName.value}&rounded=true&background=f8ebf4&color=d36ba9`); 
+
+    // требуется рефакторинг (функция повторяется здесь и в Vaccination.vue)
+    const isPopupOpen = ref(false);
+    const toggle_popup = () => {
+        isPopupOpen.value = !isPopupOpen.value
+    }
 </script>
 
 <template>
@@ -18,7 +24,7 @@
                     <i class="fa-solid fa-expand"></i>
                 </li>
 
-                <li class="userInfo">
+                <li class="userInfo" @click='toggle_popup'>
                     <img class="userIcon" :src="userIconSrc" alt="icon">
                     <span>{{ userName }}</span>
                 </li>
@@ -27,9 +33,10 @@
         </ul>
     </header>
 
-    <UserProfile 
+    <UserProfile v-show="isPopupOpen"
     :userIconSrc="userIconSrc"
     :userName="userName"
+    @toggle_popup="toggle_popup"
     />
 </template>
 
