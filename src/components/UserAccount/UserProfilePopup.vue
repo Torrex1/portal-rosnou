@@ -80,6 +80,13 @@
     justify-content: center;
     gap: 5px;
     cursor: pointer;
+
+    border: 1px solid #eceaea;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.9;
 }
 
 button img {
