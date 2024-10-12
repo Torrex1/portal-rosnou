@@ -3,30 +3,46 @@
         userIconSrc: String,
         userName: String,
     })
-
+    
+    const emit = defineEmits(['toggle_popup']);
+    
 </script>
 
 <template>
-    <div class="user-profile">
-        <div class="main-info">
-            <img :src="userIconSrc" alt="user icon">
-            <div>
-                <span class="user-name">{{ userName }}</span>
-                <span class="user-email">example@example.com</span>
-            </div>
-        </div>
-        <div class="footer-container">
-            <div class="footer-content">
-                <button>
-                    <img src="@/assets/img/shutdown.svg" alt="">
-                    <span>Выход</span>
-                </button>
-            </div>
-        </div>
-    </div>  
+    <div class="modal-shadow" @click="emit('toggle_popup')">
+
+            <div class="user-profile" @click.stop>
+                <div class="main-info">
+                    <img :src="userIconSrc" alt="user icon">
+                    <div>
+                        <span class="user-name">{{ userName }}</span>
+                        <span class="user-email">example@example.com</span>
+                    </div>
+                </div>
+                <div class="footer-container">
+                    <div class="footer-content">
+                        <button>
+                            <img src="@/assets/img/shutdown.svg" alt="">
+                            <span>Выход</span>
+                        </button>
+                    </div>
+                </div>
+            </div>  
+
+    </div>
+    
 </template>
 
 <style scoped>
+
+.modal-shadow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
 .user-profile {
     /* min-width: auto; */
     padding: 10px;
@@ -37,10 +53,12 @@
     gap: 10px;
     position: fixed;
     right: 10px;
+    top: 65px;
     
     background-color: #007bff;
     color: #fff;
     border-radius: 2px;
+    z-index: 20;
 }
 .main-info {
     display: flex;
